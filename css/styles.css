@@ -232,12 +232,14 @@ img {
   letter-spacing: 0.06em;
   color: var(--hero-title-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
   cursor: pointer;
   background-color: var(--second-hover-btn-color);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* ---------------------ADVANTAGES--------------------- */
@@ -511,6 +513,46 @@ align-items: center; */
   color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-subscribe {
+  display: flex;
+}
+.footer-btn {
+  margin-left: 12px;
+}
+
+.footer-button {
+  height: 50px;
+  min-width: 200px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--hero-title-color);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  padding: 0px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-button:focus,
+.footer-button:hover {
+  cursor: pointer;
+  background-color: var(--second-hover-btn-color);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+.footer-icon-button {
+  margin-left: 10px;
+}
+
 /* ---------------------PORTFOLIO--------------------- */
 
 .filters-list {
@@ -642,6 +684,7 @@ align-items: center; */
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 40px;
   transform: translate(-50%, -50%) scale(1) rotate(0);
   opacity: 1;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
@@ -673,4 +716,47 @@ align-items: center; */
 .backdrop.is-hidden .modal {
   opacity: 0;
   transform: scale(0.6) rotate(-390deg);
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+
+  color: var(--main-title-color);
+  margin-bottom: 12px;
+}
+.modal-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--main-text-color);
+}
+.modal-label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-input {
+  outline: none;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+}
+.modal-input:focus {
+  border-color: rgba(33, 150, 243, 1);
+}
+.modal-input-wrap {
+  position: relative;
+}
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
